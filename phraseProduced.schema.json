@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://connect-project.github.io/schemas/phraseProduced.schema.json",
+  "$id": "http://connectproject.github.io/schemas/phraseProduced.schema.json",
   "title": "Phrase Produced",
   "description": "A phrase produced as a combination of images",
   "type": "object",
