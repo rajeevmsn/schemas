@@ -13,6 +13,10 @@
       "type": "string",
       "description": "Unique Connect identifier of the user originating the event"
     },
+    "sessionId": {
+      "type": "string",
+      "description": "Unique Connect identifier of the session originating the event"
+    },
     "sessionBegin": {
       "type": "string",
       "format": "date-time",
