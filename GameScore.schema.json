@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Game Score",
+  "description": "A score obtained by a player and whether the player used the cheat mode",
+  "type": "object",
+  "properties": {
+    "applicationId": {
+      "type": "string",
+      "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
+    },
+    "userId": {
+      "type": "string",
+      "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
+    },
+    "score": {
+      "type": "number",
+      "description": "The score obtained by the player"
+    },
+    "playerName": {
+      "type": "string",
+      "description": "The name of the player"
+    },
+    "cheatMode": {
+      "type": "boolean",
+      "description": "Whether the player used the cheat mode"
+    }
+  },
+  "required": [
+    "score",
+    "playerName"
+  ],
+  "additionalProperties": false
+}

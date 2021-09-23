@@ -5,17 +5,17 @@
   "description": "A phrase produced as a combination of images",
   "type": "object",
   "properties": {
-    "appId": {
+    "applicationId": {
       "type": "string",
-      "description": "Unique Connect identifier of the app originating the event"
+      "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
     },
     "userId": {
       "type": "string",
-      "description": "Unique Connect identifier of the user originating the event"
+      "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
     },
     "sessionId": {
       "type": "string",
-      "description": "Unique Connect identifier of the session originating the event"
+      "description": "Identifier of the session originating the event"
     },
     "timestamp": {
       "type": "string",
@@ -32,13 +32,22 @@
           "imageURL": {
             "type": "string",
             "format": "url"
+          },
+          "wordPronounced": {
+            "type": "string"
           }
         },
-        "required": ["imageURL"],
+        "required": [
+          "imageURL"
+        ],
         "additionalProperties": false
       }
     }
   },
-  "required": ["appId", "userId", "timestamp", "phrase"],
+  "required": [
+    "sessionId",
+    "timestamp",
+    "phrase"
+  ],
   "additionalProperties": false
 }
