@@ -5,17 +5,17 @@
   "description": "A timestamp for the beginning and end of an app session",
   "type": "object",
   "properties": {
-    "appId": {
+    "applicationId": {
       "type": "string",
-      "description": "Unique Connect identifier of the app originating the event"
+      "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
     },
     "userId": {
       "type": "string",
-      "description": "Unique Connect identifier of the user originating the event"
+      "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
     },
     "sessionId": {
       "type": "string",
-      "description": "Unique Connect identifier of the session originating the event"
+      "description": "Identifier of the session originating the event"
     },
     "sessionBegin": {
       "type": "string",
@@ -29,8 +29,18 @@
     }
   },
   "oneOf": [
-    { "required": [ "appId", "userId", "sessionBegin" ] },
-    { "required": [ "appId", "userId", "sessionEnd" ] }
+    {
+      "required": [
+        "sessionId",
+        "sessionBegin"
+      ]
+    },
+    {
+      "required": [
+        "sessionId",
+        "sessionEnd"
+      ]
+    }
   ],
   "additionalProperties": false
 }
