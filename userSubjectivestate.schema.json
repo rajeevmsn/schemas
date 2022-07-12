@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://connectproject.github.io/schemas/userSubjectivestate.schema.json",
+    "title": "User Subjective-state",
+    "description": "Record of annotated subjective-states/feelings of the user",
+    "type": "object",
+    "properties": {
+      "applicationId": {
+        "type": "string",
+        "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
+      },
+      "userId": {
+        "type": "string",
+        "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
+      },
+      "sessionId": {
+        "type": "string",
+        "description": "Identifier of the session originating the event"
+      },
+      "userEmotion": {
+        "type": "string",
+        "description": "Feeling or emotion or subjective-state that is annotated by the user"
+      }
+    },
+    "oneOf": [
+      {
+        "required": [
+          "sessionId",
+          "userEmotion"
+        ]
+      }
+    ],
+    "additionalProperties": false
+  }
