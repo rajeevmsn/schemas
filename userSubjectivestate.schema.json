@@ -19,6 +19,9 @@
       },
       "userEmotion": {
         "type": "string",
+        "enum": ["lively", "happy", "sad", "tired", "content", "gloomy", "jittery","drowsy", 
+          "grouchy", "peppy", "nervous", "calm", "loving", "fed up", "active", "stress", "angry"
+        ],
         "description": "Feeling or emotion or subjective-state that is annotated by the user"
       }
     },
