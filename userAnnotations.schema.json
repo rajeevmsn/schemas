@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://connectproject.github.io/schemas/userAnnotations.schema.json",
+    "title": "User Annotations",
+    "description": "Array of annotations of subjective-states/feelings of the user from the local storage",
+    "type": "array",
+    "items":{
+        "type": "object",
+        "properties": {
+            "applicationId": {
+                "type": "string",
+                "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
+            },
+            "userId": {
+                "type": "string",
+                "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
+            },
+            "sessionId": {
+                "type": "string",
+                "description": "Identifier of the session originating the event"
+            },
+            "timeStamp": {
+                "type": "number",
+                "description": "Time of the annotation/event"
+            },
+            "userAnnotation": {
+                "type": "string",
+                "enum": ["lively", "happy", "sad", "tired", "content", "gloomy", "jittery","drowsy",
+                "grouchy", "peppy", "nervous", "calm", "loving", "fed up", "active", "stressed", "angry"
+                ],
+                "description": "Feeling or emotion or subjective-state that is annotated by the user"
+            }
+        },
+         "oneOf": [
+        {
+        "required": [
+          "sessionId",
+          "timeStamp",
+          "userAnnotation"
+        ]
+        }
+    ],
+    "additionalProperties": false
+  }
+}
