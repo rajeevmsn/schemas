@@ -24,131 +24,67 @@
                 "properties": {
                     "bufferStart": {
                         "type": "number",
-                        "description": "Time of start of buffer"
-                    },
-                    "bufferStop": {
-                        "type": "number",
-                        "description": "Time of end of buffer"
+                        "description": "Time dtsmp"
                     },
                     "ax_M": {
                         "type": "number",
-                        "description": "Mean of accelerometer X"
+                        "description": "accelerometer X"
                     },
 
                     "ay_M": {
                         "type": "number",
-                        "description": "Mean of accelerometer Y"
+                        "description": "accelerometer Y"
                     },
 
                     "az_M": {
                         "type": "number",
-                        "description": "Mean of accelerometer Z"
+                        "description": "accelerometer Z"
                     },
                     "cx_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope X"
+                        "description": "  gyroscope X"
                     },
 
                     "cy_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope Y"
+                        "description": "  gyroscope Y"
                     },
 
                     "cz_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope Z"
+                        "description": "  gyroscope Z"
                     },
                     "cdx_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope dX"
+                        "description": "  gyroscope dX"
                     },
 
                     "cdy_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope dY"
+                        "description": "  gyroscope dY"
                     },
 
                     "cdz_M": {
                         "type": "number",
-                        "description": "Mean of gyroscope dZ"
+                        "description": "  gyroscope dZ"
                     },
                     "hrmRaw_M": {
                         "type": "number",
-                        "description": "Mean of hrm raw"
+                        "description": "  hrm raw"
                     },
 
                     "hrmFilt_M": {
                         "type": "number",
-                        "description": "Mean of hrm filtered"
+                        "description": "  hrm filtered"
                     },
 
                     "hrmBPM_M": {
                         "type": "number",
-                        "description": "Mean of hrm BPM"
+                        "description": "  hrm BPM"
                     },
                     "hrmConfidence_M": {
                         "type": "number",
-                        "description": "Mean of hrm Confidence"
-                    },
-                    "ax_S": {
-                        "type": "number",
-                        "description": "S.D of accelerometer X"
-                    },
-
-                    "ay_S": {
-                        "type": "number",
-                        "description": "S.D of accelerometer Y"
-                    },
-
-                    "az_S": {
-                        "type": "number",
-                        "description": "S.D of accelerometer Z"
-                    },
-                    "cx_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope X"
-                    },
-
-                    "cy_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope Y"
-                    },
-
-                    "cz_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope Z"
-                    },
-                    "cdx_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope dX"
-                    },
-
-                    "cdy_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope dY"
-                    },
-
-                    "cdz_S": {
-                        "type": "number",
-                        "description": "S.D of gyroscope dZ"
-                    },
-                    "hrmRaw_S": {
-                        "type": "number",
-                        "description": "S.D of hrm raw"
-                    },
-
-                    "hrmFilt_S": {
-                        "type": "number",
-                        "description": "S.D of hrm filtered"
-                    },
-
-                    "hrmBPM_S": {
-                        "type": "number",
-                        "description": "S.D of hrm BPM"
-                    },
-                    "hrmConfidence_S": {
-                        "type": "number",
-                        "description": "S.D of hrm Confidence"
+                        "description": "  hrm Confidence"
                     }
                 },
                 "additionalProperties": false
