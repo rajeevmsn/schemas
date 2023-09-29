@@ -48,6 +48,14 @@
                             "angry"
                         ],
                         "description": "Feeling or emotion or subjective-state that is annotated by the user"
+                    },
+                    "confidence": {
+                        "type": "number",
+                        "description": "Confidence about annotation from 1(min) to 5 (max)"
+                    },
+                    "activity": {
+                        "type":"string",
+                        "description": "Activity of the user during the time of annotation"
                     }
                 },
                 "required": [
