@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://connectproject.github.io/schemas/bangleStream.schema.json",
+    "$id": "http://connectproject.github.io/schemas/bangleStream28.schema.json",
     "title": "Bangle Stream",
     "description": "Data from BangleJS2 (Accelerometer, gyroscope, Heartrate and timestamp)",
     "type": "object",
