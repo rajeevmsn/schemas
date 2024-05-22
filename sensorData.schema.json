@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://connectproject.github.io/schemas/sensorData.schema.json",
+  "title": "Sensor Data",
+  "description": "Sending any sensor data to the Connect platform. Each sensor object contains the timestamp, the type of sensor, output of the sensor, and the unit of the sensor data.",
+  "type": "object",
+  "properties": {
+    "applicationId": {
+      "type": "string",
+      "description": "Unique Connect identifier of the app originating the event. Read-only (added by Connect)"
+    },
+    "userId": {
+      "type": "string",
+      "description": "Unique Connect identifier of the user originating the event. Read-only (added by Connect)"
+    },
+    "sessionId": {
+      "type": "string",
+      "description": "Identifier of the session originating the event"
+    },
+    "sensor": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "integer",
+            "description": "Timestamp of the data in milliseconds since epoch"
+          },
+          "location": {
+            "type": "integer",
+            "description": "Unique identifier given to the location of the sensor by user"
+          },
+          "sensorType": {
+            "type": "string",
+            "enum": [
+              "test",
+              "temperature",
+              "humidity",
+              "pressure",
+              "light",
+              "acceleration",
+              "gyro",
+              "magneticfield",
+              "airQuality",
+              "noiseLevel",
+              "vibration",
+              "proximity",
+              "ultrasound",
+              "co2",
+              "ozone",
+              "voc",
+              "heartrate",
+              "bloodpressure",
+              "spo2",
+              "ecg",
+              "emg"
+            ],
+            "description": "Type of sensor data"
+          },
+          "value": {
+            "type": "number",
+            "description": "Value of the sensor data"
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "test", "celsius", "fahrenheit", "kelvin", "percentage",
+              "pascal", "lux", "m/s^2", "rad/s", "tesla", "ppm", "dB",
+              "Hz", "cm", "mm", "inch", "ft", "m", "km", "mile", "yard",
+              "nautical mile", "knot", "km/h", "m/s", "mph", "ft/s",
+              "g", "rad/s^2", "ppb", "bpm", "mmHg", "percent", "mV", "ms"
+            ],
+            "description": "Unit of the sensor data"
+          }
+        },
+        "required": [
+          "timestamp",
+          "sensorType",
+          "value"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "sessionId",
+    "sensor"
+  ],
+  "additionalProperties": false
+}
