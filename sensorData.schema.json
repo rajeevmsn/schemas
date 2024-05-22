@@ -22,7 +22,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "timestamp": {
+          "timeStamp": {
             "type": "integer",
             "description": "Timestamp of the data in milliseconds since epoch"
           },
@@ -33,6 +33,7 @@
           "sensorType": {
             "type": "string",
             "enum": [
+              "other",
               "test",
               "temperature",
               "humidity",
@@ -40,20 +41,21 @@
               "light",
               "acceleration",
               "gyro",
-              "magneticfield",
+              "magneticField",
               "airQuality",
               "noiseLevel",
               "vibration",
               "proximity",
               "ultrasound",
               "co2",
-              "ozone",
+              "o3",
               "voc",
-              "heartrate",
-              "bloodpressure",
+              "heartRate",
+              "bloodPressure",
               "spo2",
               "ecg",
-              "emg"
+              "emg",
+              "hallEffect"
             ],
             "description": "Type of sensor data"
           },
@@ -64,7 +66,7 @@
           "unit": {
             "type": "string",
             "enum": [
-              "test", "celsius", "fahrenheit", "kelvin", "percentage",
+              "other", "test", "celsius", "fahrenheit", "kelvin", "percentage",
               "pascal", "lux", "m/s^2", "rad/s", "tesla", "ppm", "dB",
               "Hz", "cm", "mm", "inch", "ft", "m", "km", "mile", "yard",
               "nautical mile", "knot", "km/h", "m/s", "mph", "ft/s",
@@ -74,7 +76,7 @@
           }
         },
         "required": [
-          "timestamp",
+          "timeStamp",
           "sensorType",
           "value"
         ],
