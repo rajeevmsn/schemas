@@ -23,8 +23,9 @@
         "type": "object",
         "properties": {
           "timeStamp": {
-            "type": "integer",
-            "description": "Timestamp of the data in milliseconds since epoch"
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the sensor data was recorded. Format: date-time (ISO 8601)"
           },
           "location": {
             "type": "integer",
